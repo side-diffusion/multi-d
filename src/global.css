@@ -1,0 +1,112 @@
+
+/* global.css - Minimal Black & White (Grayscale) Theme */
+@font-face {
+    font-family: 'Orbit-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/Orbit-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+  @font-face {
+      font-family: 'Pretendard-Regular';
+      src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+:root {
+  --bg-main: #000000;
+  --bg-panel: #181818;
+  --bg-card: #222222;
+  --text-main: #f5f5f5;
+  --text-muted: #b0b0b0;
+  --accent-1: #ffffff;
+  --accent-2: #cccccc;
+  --accent-3: #888888;
+  --border: #333333;
+  --font-main: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
+}
+
+html, body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family:'Orbit-Regular';
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.01em;
+  transition: background 0.3s, color 0.3s;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent-1);
+   font-family:'Orbit-Regular';
+  font-weight: normal;
+  margin-bottom: 0.5em;
+  text-shadow: none;
+}
+
+a {
+  color: var(--accent-2);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--accent-1);
+}
+
+button, input, textarea, select {
+  background: var(--bg-panel);
+  color: var(--text-main);
+
+    font-family:'Orbit-Regular';
+
+  outline: none;
+  transition: border 0.2s;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+button:hover, input:focus, textarea:focus, select:focus {
+
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--bg-panel);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-3);
+  border-radius: 8px;
+}
+
+.connection-status.connected {
+  background: var(--accent-1);
+  color: #111111;
+  font-weight: normal;
+}
+.connection-status {
+  background: var(--accent-3);
+  color: #fff;
+  font-weight: normal;
+}
+
+/* Remove animation and glow */
+.prompt-card, .message, .streaming-message {
+  animation: none;
+}
+
+::selection {
+  background: var(--accent-2);
+  color: #111111;
+} 
